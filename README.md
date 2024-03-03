@@ -1,4 +1,4 @@
-# Project Objective
+# Objective
 This project is created to explore how Microsoft Fabric and Azure OpenAI can be used to analyze textual data. This project goal is to only leverage Fabric + AOAI to see how powerful using only these two architectural components can be for text based analysis. Microsoft Fabric offers the OneLake which means any type of data, including unstructured text, can be stored. The powerful combination of Microsoft Fabric and Azure OpenAI can unlock valuable insights in your text data like never before!
 
 This project explores the following capabilities of Azure OpenAI, using Microsoft Fabric.
@@ -18,10 +18,10 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 
 *Note: an alternative approach is to leverage [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal)*
 
-# Project Architecture
+# Architecture
 ![Project Architecture](./images/project_architecture.png)
 
-# Project Steps
+# Steps
 ![Project Steps](./images/project_steps.png)
 
 1. Build Lakehouse
