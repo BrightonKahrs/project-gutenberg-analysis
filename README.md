@@ -46,11 +46,11 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 
     After running the script, if you go back to the workspace and open up your Lakehouse, it should look like the following (if it doesnt try hitting the refresh in the top left)
 
-    ![Step 2 End Result](./images/step_2_end_result.png)
+    ![Step 2 End Result](./images/step_2_end_result.PNG)
 
      You can explore the data using the Lakehouse explorer
 
-    ![Lakehouse Explorer](./images/lakehouse_explorer.png)
+    ![Lakehouse Explorer](./images/lakehouse_explorer.PNG)
 
 3. Enrich eBook Data using Azure OpenAI
 4. Analyze Enriched Data using Notebooks and Power BI
