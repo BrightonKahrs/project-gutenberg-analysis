@@ -42,7 +42,15 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 
     ![Set Default Lakehouse](./images/set_default_lakehouse.png)
 
-    Run each cell in the notebook and follow along with the markdown. You are given some options to change some parameters but the recommend parameters are already set. This notebook will create the necessary folders, ingest the data from Project Gutenberg, and then prepare the data for use with Azure OpenAI by using [semantic kernel's](https://learn.microsoft.com/en-us/semantic-kernel/) [text chunker](https://github.com/microsoft/semantic-kernel/blob/main/python/semantic_kernel/text/text_chunker.py).
+    Run each cell in the notebook and follow along with the markdown. You are given some options to change some parameters but the recommend parameters are already set. This notebook will create the necessary folders, ingest the data from Project Gutenberg, and then prepare the data for use with Azure OpenAI by using [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/), more specifically [text chunker](https://github.com/microsoft/semantic-kernel/blob/main/python/semantic_kernel/text/text_chunker.py)
+
+    After running the script, if you go back to the workspace and open up your Lakehouse, it should look like the following (if it doesnt try hitting the refresh in the top left)
+
+    ![Step 2 End Result](./images/step_2_end_result.png)
+
+     You can explore the data using the Lakehouse explorer
+
+    ![Lakehouse Explorer](./images/lakehouse_explorer.png)
 
 3. Enrich eBook Data using Azure OpenAI
 4. Analyze Enriched Data using Notebooks and Power BI
