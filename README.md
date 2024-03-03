@@ -34,7 +34,7 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 
     Download or clone this repo to access the Jupyter Notebooks in the scripts folder, then import the 01_data_ingestion_and_prep notebook
 
-    ![Import Notebook](./images/import_notebook.gif)
+    ![Import Notebook](./images/import_notebook.png)
 
     *If you do not see the Import Notebook option, make sure you are on the Data Science or Data Engineering experience*
     
