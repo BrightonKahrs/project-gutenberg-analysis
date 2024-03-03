@@ -7,7 +7,7 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 3. Text Classification
 4. Text Embeddings and Semantic Similarity
 
-*Note: This project leverages data from Project Gutenberg, the first provider of free eBooks, please consider donating at https://www.gutenberg.org/donate/*
+*Note: This project leverages data from Project Gutenberg, the first provider of free eBooks. Please consider donating at https://www.gutenberg.org/donate/*
 
 *This project should take about 1 hour to complete, follow the project steps below to get started*
 
@@ -23,3 +23,8 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 
 # Project Steps
 ![Project Steps](./images/project_steps.png)
+
+1. Build Lakehouse
+2. Ingest eBook Data onto OneLake
+3. Enrich eBook Data using Azure OpenAI
+4. Analyze Enriched Data using Notebooks and Power BI
