@@ -9,6 +9,8 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 
 *Note: This project leverages data from Project Gutenberg, the first provider of free eBooks, please consider donating at https://www.gutenberg.org/donate/*
 
+*This project should take about 1 hour to complete*
+
 # Prerequisites
 1. An [Azure](https://azure.microsoft.com/en-us/free/) subscription
 2. Contributor access to a [Microsoft Fabric workspace](https://learn.microsoft.com/en-us/fabric/get-started/workspaces)
@@ -16,5 +18,5 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 
 *Note: an alternative approach is to leverage [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal)*
 
-# Using this repo
-This project should take about 1 hour to complete
+# Project Architecture
+![Project Architecture](./images/project_architecture.png)
