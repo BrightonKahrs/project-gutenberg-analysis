@@ -25,6 +25,17 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 ![Project Steps](./images/project_steps.png)
 
 1. Build Lakehouse
+
+    Go to your workspace, select the 'Data Science' experience, and create your Lakehouse. Feel free to name it whatever you like!
+    ![Build Lakehouse](./images/build_lakehouse.gif)
+
 2. Ingest eBook Data onto OneLake
+
+    Download or clone this repo to access the Jupyter Notebooks in the scripts folder, then import the 01_data_ingestion_and_prep notebook
+    ![Import Notebook](./images/import_notebook.gif)
+    *If you do not see the Import Notebook option, make sure you are on the Data Science or Data Engineering experience*
+    
+    
+
 3. Enrich eBook Data using Azure OpenAI
 4. Analyze Enriched Data using Notebooks and Power BI
