@@ -25,11 +25,13 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 ![Project Steps](./images/project_steps.png)
 
 1. Build Lakehouse
+1. Build Lakehouse
 
     Go to your workspace, select the 'Data Science' or 'Data Engineering' experience, and create your Lakehouse. Feel free to name it whatever you like!
 
     ![Build Lakehouse](./images/build_lakehouse.png)
 
+2. Ingest eBook Data onto OneLake
 2. Ingest eBook Data onto OneLake
 
     Download or clone this repo to access the Jupyter Notebooks in the scripts folder, then import the 01_data_ingestion_and_prep notebook into your Fabric workspace
@@ -47,9 +49,11 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
     After running the script, if you go back to the workspace and open up your Lakehouse, it should look like the following (if it doesnt try hitting the refresh in the top left)
 
     ![Step 2 End Result](./images/step_2_end_result.PNG)
+    ![Step 2 End Result](./images/step_2_end_result.PNG)
 
      You can explore the data using the Lakehouse explorer
 
+    ![Lakehouse Explorer](./images/lakehouse_explorer.PNG)
     ![Lakehouse Explorer](./images/lakehouse_explorer.PNG)
 
 3. Enrich eBook Data using Azure OpenAI
