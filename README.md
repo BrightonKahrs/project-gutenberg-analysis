@@ -32,13 +32,17 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 
 2. Ingest eBook Data onto OneLake
 
-    Download or clone this repo to access the Jupyter Notebooks in the scripts folder, then import the 01_data_ingestion_and_prep notebook
+    Download or clone this repo to access the Jupyter Notebooks in the scripts folder, then import the 01_data_ingestion_and_prep notebook into your Fabric workspace
 
     ![Import Notebook](./images/import_notebook.png)
 
     *If you do not see the Import Notebook option, make sure you are on the Data Science or Data Engineering experience*
     
-    
+    Open notebook and set the Lakehouse you just created as the default Lakehouse for your notebook
+
+    ![Set Default Lakehouse](./images/set_default_lakehouse.png)
+
+    Run each cell in the notebook and follow along with the markdown. You are given some options to change some parameters but the recommend parameters are already set. This notebook will create the necessary folders, ingest the data from Project Gutenberg, and then prepare the data for use with Azure OpenAI by using [semantic kernel's](https://learn.microsoft.com/en-us/semantic-kernel/) [text chunker](https://github.com/microsoft/semantic-kernel/blob/main/python/semantic_kernel/text/text_chunker.py).
 
 3. Enrich eBook Data using Azure OpenAI
 4. Analyze Enriched Data using Notebooks and Power BI
