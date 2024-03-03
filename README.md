@@ -7,14 +7,14 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 3. Text Classification
 4. Text Embeddings and Semantic Similarity
 
-**Note: This project leverages data from Project Gutenberg, the first provider of free eBooks, please consider donating at https://www.gutenberg.org/donate/**
+*Note: This project leverages data from Project Gutenberg, the first provider of free eBooks, please consider donating at https://www.gutenberg.org/donate/*
 
 # Prerequisites
-1. An Azure tenant
-2. A Microsoft Fabric account
-3. Access to a Microsoft Fabric F64 (or higher) capacity (The Fabric trial FT1 sku will not work) **or** an active Azure OpenAI service endpoint and key.
+1. An [Azure](https://azure.microsoft.com/en-us/free/) subscription
+2. Contributor access to a [Microsoft Fabric workspace](https://learn.microsoft.com/en-us/fabric/get-started/workspaces)
+3. Access to a [Microsoft Fabric F64 capacity](https://learn.microsoft.com/en-us/fabric/enterprise/buy-subscription) or higher (The Fabric trial FT1 sku will not work). This capacity should be connected to your workspace.
 
-**Please note this repo will use the Microsoft Fabric F64 approach**
+*Note: an alternative approach is to create an [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal)*
 
 # Using this repo
 This project should take about 1 hour to complete
