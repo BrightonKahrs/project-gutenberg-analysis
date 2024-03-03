@@ -24,13 +24,13 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 # Steps
 ![Project Steps](./images/project_steps.png)
 
-### 1. Build Lakehouse
+1. Build Lakehouse
 
     Go to your workspace, select the 'Data Science' or 'Data Engineering' experience, and create your Lakehouse. Feel free to name it whatever you like!
 
     ![Build Lakehouse](./images/build_lakehouse.png)
 
-### 2. Ingest eBook Data onto OneLake
+2. Ingest eBook Data onto OneLake
 
     Download or clone this repo to access the Jupyter Notebooks in the scripts folder, then import the 01_data_ingestion_and_prep notebook into your Fabric workspace
 
@@ -46,11 +46,25 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 
     After running the script, if you go back to the workspace and open up your Lakehouse, it should look like the following (if it doesnt try hitting the refresh in the top left)
 
-    ![Step 2 End Result](./images/step_2_end_result.png)
+    ![Step 2 End Result](./images/step_2_end_result.PNG)
 
      You can explore the data using the Lakehouse explorer
 
-    ![Lakehouse Explorer](./images/lakehouse_explorer.png)
+    ![Lakehouse Explorer](./images/lakehouse_explorer.PNG)
 
-### 3. Enrich eBook Data using Azure OpenAI
-### 4. Analyze Enriched Data using Notebooks and Power BI
+3. Enrich eBook Data using Azure OpenAI
+
+    Import the 02_enrich_data_with_AzureOpenAI notebook using the same process as before (including setting the default Lakehouse)
+
+    This notebook will be accessing Azure OpenAI resource from directly within Microsoft Fabric. When using an F64 sku or higher notice how you do not need an API key or a provisioned service in Azure! The use of Azure OpenAI is charged against the capacity units on your F64 capacity. AMAZING! With this lightweight, yet extremely powerful, use of Azure OpenAI we will perform the following:
+
+    1. Entity Extraction
+    2. Text Summarization
+    3. Text Classification
+    4. Generate Embeddings
+
+    Then all enriched data is saved back to JSON for future use. Data is also saved as a Lakehouse table to be analyzed with notebooks, SQL, and Power BI! Your Lakehouse should now look something like:
+
+    ![Step 3 End Result](./images/step_3_end_result.PNG)
+
+4. Analyze Enriched Data using Notebooks and Power BI
