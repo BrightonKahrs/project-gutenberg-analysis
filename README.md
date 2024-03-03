@@ -28,7 +28,7 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 
     Go to your workspace, select the 'Data Science' experience, and create your Lakehouse. Feel free to name it whatever you like!
 
-    ![Build Lakehouse](./images/build_lakehouse.,p4)
+    ![Build Lakehouse](./images/build_lakehouse.mp4)
 
 2. Ingest eBook Data onto OneLake
 
