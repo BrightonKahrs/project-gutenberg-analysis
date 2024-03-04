@@ -1,5 +1,5 @@
 # Objective
-This project is created to explore how Microsoft Fabric and Azure OpenAI can be used to analyze textual data. This project goal is to only leverage Fabric + AOAI to see how powerful using only these two architectural components can be for text based analysis. Microsoft Fabric offers the OneLake which means any type of data, including unstructured text, can be stored. The powerful combination of Microsoft Fabric and Azure OpenAI can unlock valuable insights in your text data like never before!
+This project is created to explore how Microsoft Fabric and Azure OpenAI can be used to analyze textual data. This project goal is to only leverage Fabric + AOAI to see how powerful using only these two architectural components can be for text based analysis. Microsoft Fabric offers the OneLake which means any type of data, including unstructured text, can be stored. The powerful combination of Microsoft Fabric and Azure OpenAI can unlock valuable insights in your text data like never before! In this project you will even be able to analyze text data with Power BI!
 
 This project explores the following capabilities of Azure OpenAI, using Microsoft Fabric.
 1. Entity Extraction
@@ -68,3 +68,12 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
     ![Step 3 End Result](./images/step_3_end_result.PNG)
 
 4. Analyze Enriched Data using Notebooks and Power BI
+
+    Import the 03_TSNE_data_analysis notebook using the same process as step 2 (including setting the default Lakehouse). Run the notebook.
+
+    This notebook will use the embeddings we generated to find 'how' semantically similar each book is based on their cosine similarity. OpenAI ada-002 embeddings have 1536 dimensions which is far too many for humans to visualize. Thus, [TSNE](https://towardsdatascience.com/t-sne-clearly-explained-d84c537f53a) gives us a good and human-friendly estimate of 'how' similar these embeddings are. Here is an example from my most recent run:
+
+    ![TSNE Visual](./images/tsne.PNG)
+
+    Already we can see some clumpings of data from these books! This notebook now saves the x and y axis from this visual, then updates the books table with it. This way we can further our analysis with Power BI!
+
