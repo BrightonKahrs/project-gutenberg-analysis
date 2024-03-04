@@ -1,5 +1,5 @@
 # Objective
-This project is created to explore how Microsoft Fabric and Azure OpenAI can be used to analyze textual data. This project goal is to only leverage Microsoft Fabric and Azure OpenAI to see how powerful using only these two architectural components can be for text based analysis. Microsoft Fabric offers the OneLake which means any type of data, including unstructured text, can be stored. The powerful combination of Microsoft Fabric and Azure OpenAI can unlock valuable insights in your text data like never before using notebooks and Power BI!
+This project is created to explore how Microsoft Fabric and Azure OpenAI can be used to analyze a document repository of text-based data. Microsoft Fabric offers the OneLake which means any type of data, including unstructured text, can be stored. Azure OpenAI GPT models can turn text input prompts into insights. The powerful combination of these two can unlock valuable insights in your text data like never before. You will even be able to use notebooks and Power BI to analyze the enriched document repository! Our text-based document store for this walkthrough will be public domain eBooks.
 
 This project explores the following capabilities of Azure OpenAI, using Microsoft Fabric.
 1. Entity Extraction
@@ -7,19 +7,21 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 3. Text Classification
 4. Text Embeddings and Semantic Similarity
 
-*Note: This project leverages data from Project Gutenberg, the first provider of free eBooks. Please consider donating at https://www.gutenberg.org/donate/*
+*[Here](https://www.youtube.com/watch?v=zfkZxRUkEn8) is a link to the video submission - this project should take about 1 hour to complete, follow the project steps below to get started*
 
-*This project should take about 1 hour to complete, follow the project steps below to get started*
+*Note: This project leverages data from Project Gutenberg, the first free provider of public domain eBooks. Please consider donating at https://www.gutenberg.org/donate/*
 
 # Real World Value
-Many organizations have a treasure trove of text based data. This unstructured data can be hard to navigate, however recent advancements in LLMs make it easier than ever to get valuable insights out. Organization's document stores can be massive and searching through them can be painful. Tools used in this project can make understanding what data you have and how it connects extremely efficient. Entity extraction can save tons of time sifting through documents for metadata, text summarization can allow you to understand a document incredibly quicker, and text classification can get you started looking in the right direction. Microsoft, in partnership with OpenAI, is leading the way into the new age of artificial intelligence.
+Many organizations have a treasure trove of text based data. Organization's document stores can be massive and searching through them manually can be time intensive. Tools used in this project make understanding your data and how it connects extremely efficient. Entity extraction can save tons of time sifting through documents for metadata, text summarization can allow you to understand a document incredibly quicker, and text classification can get you started looking in the right direction. Microsoft, in partnership with OpenAI, is leading the way into the new age of artificial intelligence.
+
+For example, a lawyer can use such tooling to find previous court cases that are similar to the one they are working on.
 
 # Prerequisites
 1. An [Azure](https://azure.microsoft.com/en-us/free/) subscription
 2. Contributor access to a [Microsoft Fabric workspace](https://learn.microsoft.com/en-us/fabric/get-started/workspaces)
-3. Access to a [Microsoft Fabric F64 capacity](https://learn.microsoft.com/en-us/fabric/enterprise/buy-subscription) or higher (The Fabric trial FT1 sku will not work). This capacity should be connected to your workspace.
+3. Access to a [Microsoft Fabric F64 capacity](https://learn.microsoft.com/en-us/fabric/enterprise/buy-subscription) or higher (The Fabric trial FT1 sku will not work for direct Azure OpenAI integration). This capacity should be connected to your workspace.
 
-*Note: an alternative approach is to leverage [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal)*
+*Note: an alternative approach would be to leverage any size Microsoft Fabric sku and a provisioned [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal)*
 
 # Architecture
 ![Project Architecture](./images/project_architecture.png)
