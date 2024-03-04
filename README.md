@@ -100,15 +100,14 @@ Many organizations have a treasure trove of text based data. This unstructured d
 
     Save the Power BI report to your workspace and then start using it! Power BI is very interactive, by clicking on any visual it will cross filter others. 
 
-    ![Cross Filter](./images/cross_filter.png)
+    ![Cross Filter](./images/cross_filter.PNG)
 
     In the scatter chart you can box highlight any of the groupings to see what OpenAI thought were similar texts. 
 
-    ![Scatter Chart Box Highlight](./images/scatter_chart_box_highlight.png)
+    ![Scatter Chart Box Highlight](./images/scatter_chart_box_highlight.PNG)
 
     In a single Power BI report we can see all of the work we did with Azure OpenAI. Entity extraction gives us book titles, author, and more. Text summarization shows us the summary in the book details. Text classification is shown in our category bar chart. Semantic similarity is shown through the TSNE visualization. Through this we have turned unstructured text data into meaningful insights! 
     
     This concludes the project, thank you for your time. I hope you are now as excited about Microsoft Fabric and Azure OpenAI as I am!
 
-    developer: Brighton Kahrs
-    developer_email: brightonkahrs@msn.com
+    developer: Brighton Kahrs | brightonkahrs@msn.com
