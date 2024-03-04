@@ -49,7 +49,7 @@ Many organizations have a treasure trove of text based data. This unstructured d
 
     ![Set Default Lakehouse](./images/set_default_lakehouse.png)
 
-    Run each cell in the notebook and follow along with the markdown. You are given some options to change some parameters but the recommend parameters are already set. This notebook will create the necessary folders, ingest the data from Project Gutenberg, and then prepare the data for use with Azure OpenAI by using [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/), more specifically [text chunker](https://github.com/microsoft/semantic-kernel/blob/main/python/semantic_kernel/text/text_chunker.py)
+    Run each cell in the notebook and follow along with the markdown. Notice how quickly the spark pool starts! You are given some options to change some parameters but the recommend parameters are already set. This notebook will create the necessary folders, ingest the data from Project Gutenberg, and then prepare the data for use with Azure OpenAI by using [Semantic Kernel](https://learn.microsoft.com/en-us/semantic-kernel/), more specifically [text chunker](https://github.com/microsoft/semantic-kernel/blob/main/python/semantic_kernel/text/text_chunker.py)
 
     After running the script, if you go back to the workspace and open up your Lakehouse, it should look like the following (if it doesnt try hitting the refresh in the top left)
 
@@ -70,15 +70,23 @@ Many organizations have a treasure trove of text based data. This unstructured d
     3. Text Classification
     4. Generate Embeddings
 
-    Then all enriched data is saved back to JSON for future use. Data is also saved as a Lakehouse table to be analyzed with notebooks, SQL, and Power BI! Your Lakehouse should now look something like:
+    Run each cell in the notebook examining how each function is using Azure OpenAI prompting
+
+    The entire text would be too large to fit into the token window for these models. That is why we are using the chunks we created before, and will use a text reduction technique. We summarize each of the smaller chunks, then take all of our summaries to make a summary of the entire document.
+
+    We then use the summary as the input for our classification prompt using the predefined categories in the script
+
+    We use a similar technique to the summarization as we do with embeddings. Embeddings are numeric representations of the semantic meaning of text. Here we get the embedding of each chunk, then take the average of all the embeddings. So more simply we are aiming for the average meaning of the entire text. There are more advanced techniques to weight chunks, but here we use an evenly distributed weight amongst chunks
+
+    All enriched data is saved back to JSON for future use. Data is also saved as a Lakehouse table to be analyzed with notebooks, SQL, and Power BI! Your Lakehouse should now look something like:
 
     ![Step 3 End Result](./images/step_3_end_result.PNG)
 
 4. Analyze Enriched Data using Notebooks and Power BI
 
-    Import the 03_TSNE_data_analysis notebook using the same process as step 2 (including setting the default Lakehouse). Run the notebook.
+    Import the 03_TSNE_data_analysis notebook using the same process as step 2 (including setting the default Lakehouse)
 
-    This notebook will use the embeddings we generated to find 'how' semantically similar each book is based on their cosine similarity. OpenAI ada-002 embeddings have 1536 dimensions which is far too many for humans to visualize. Thus, [TSNE](https://towardsdatascience.com/t-sne-clearly-explained-d84c537f53a) gives us a good and human-friendly estimate of 'how' similar these embeddings are. Here is an example from my most recent run:
+    Run the notebook. This notebook will use the embeddings we generated to find 'how' semantically similar each book is based on their cosine similarity. OpenAI ada-002 embeddings have 1536 dimensions which is far too many for humans to visualize. Thus, [TSNE](https://towardsdatascience.com/t-sne-clearly-explained-d84c537f53a) gives us a good and human-friendly estimate of 'how' similar these embeddings are. Here is an example from my most recent run:
 
     ![TSNE Visual](./images/tsne.PNG)
 
@@ -98,11 +106,11 @@ Many organizations have a treasure trove of text based data. This unstructured d
 
     ![New Power BI Report](./images/new_power_bi_report.PNG)
 
-    Here is the report I created but feel free to get creative and explore the data! To understand how many books were assigned to each category I made a clustered column chart with 'category' on the x-axis and 'Count of book_id' on the y-axis (by clicking the arrow next to book_id in the y-axis you can change the aggregation metric). On the right I made a scatter chart with 'book_id' in the values, 'Sum of x_axis' in the x-axis and 'Sum of y_axis' in the y-axis and 'category' in the legend (I also added zoom sliders from the formatting pane). Then on the bottom I provided the book details in a table visual.
+    Here is the report I created but feel free to get creative and make your own! To understand how many books were assigned to each category I made a clustered column chart with 'category' on the x-axis and 'Count of book_id' on the y-axis (by clicking the arrow next to book_id in the y-axis you can change the aggregation metric). On the right I made a scatter chart with 'book_id' in the values, 'Sum of x_axis' in the x-axis and 'Sum of y_axis' in the y-axis and 'category' in the legend (I also added zoom sliders from the formatting pane). Then on the bottom I provided the book details in a table visual.
 
     ![Finished Power BI Report](./images/finished_power_bi_report.png)
 
-    Save the Power BI report to your workspace and then start using it! Power BI is very interactive, by clicking on any visual it will cross filter others. 
+    Click 'File' in the top left and save the Power BI report to your workspace, name it whatever you like. Now its time to start using it! Power BI is very interactive, by clicking on any visual it will cross filter others. 
 
     ![Cross Filter](./images/cross_filter.PNG)
 
@@ -110,7 +118,7 @@ Many organizations have a treasure trove of text based data. This unstructured d
 
     ![Scatter Chart Box Highlight](./images/scatter_chart_box_highlight.PNG)
 
-    In a single Power BI report we can see all of the work we did with Azure OpenAI. Entity extraction gives us book titles, author, and more. Text summarization shows us the summary in the book details. Text classification is shown in our category bar chart. Semantic similarity is shown through the TSNE visualization. Through this we have turned unstructured text data into meaningful insights! 
+    In a single Power BI report we can see all of the work we did with Azure OpenAI. Entity extraction gives us valuable metadata such as book title, author, and more. Text summarization shows us the summary in the book details. Text classification is shown in our category bar chart. Semantic similarity is shown through the TSNE visualization. Through this we have turned unstructured text data into meaningful insights! 
     
     This concludes the project, thank you for your time. I hope you are now as excited about Microsoft Fabric and Azure OpenAI as I am!
 
