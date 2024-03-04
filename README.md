@@ -1,5 +1,5 @@
 # Objective
-This project is created to explore how Microsoft Fabric and Azure OpenAI can be used to analyze a document repository of text-based data. Microsoft Fabric offers the OneLake which means any type of data, including unstructured text, can be stored. Azure OpenAI's intelligence, mixed with clever prompting, can unlock information from text with incredible efficiency. The powerful combination of these two can unlock valuable insights in your text data like never before. You will even be able to use notebooks and Power BI to analyze the enriched document repository! Our text-based document store for this walkthrough will be public domain eBooks.
+This project explores how Microsoft Fabric and Azure OpenAI can analyze a document repository of text-based data. Microsoft Fabric offers the OneLake which means any type of data, including unstructured text, can be stored. Azure OpenAI's intelligence, mixed with clever prompting, unlocks information from text with incredible efficiency. The powerful combination of these two unlocks valuable insights in your text data like never before. You will even be able to use notebooks and Power BI to analyze the enriched document repository! Our text-based document store for this walkthrough will be public domain eBooks.
 
 This project explores the following capabilities of Azure OpenAI, using Microsoft Fabric.
 1. Entity Extraction
@@ -12,9 +12,7 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 *Note: This project leverages data from Project Gutenberg, the first free provider of public domain eBooks. Please consider donating at https://www.gutenberg.org/donate/*
 
 # Real World Value
-Many organizations have a treasure trove of text based data. Organization's document stores can be massive and searching through them manually can be time intensive. Tools used in this project make understanding your data and how it connects extremely efficient. Entity extraction can save tons of time sifting through documents for metadata, text summarization can allow you to understand a document much quicker, and text classification can get you started looking in the right direction. Microsoft, in partnership with OpenAI, is leading the way into the new age of artificial intelligence.
-
-For example, a lawyer can use such tooling to find previous court cases that are similar to the one they are working on.
+Many organizations have a treasure trove of text based data. These document stores can be massive though, and searching through them manually would be time-intensive. Tools used in this project make understanding your data and how it connects extremely efficient. Entity extraction saves tons of time sifting through documents for metadata, text summarization allows you to understand a document much quicker, and text classification gets you started looking in the right direction. For example, a lawyer can use such tooling to find previous court cases that are similar to the one they are working on, without having to manually search through countless documents!
 
 # Prerequisites
 1. An [Azure](https://azure.microsoft.com/en-us/free/) subscription
