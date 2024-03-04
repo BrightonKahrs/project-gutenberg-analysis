@@ -41,7 +41,7 @@ For example, a lawyer can use such tooling to find previous court cases that are
 
 2. Ingest eBook Data onto OneLake
 
-    Download or clone this repo to access the Jupyter Notebooks in the scripts folder, then import the 01_data_ingestion_and_prep notebook into your Fabric workspace
+    Download or clone this repo to access the Jupyter Notebooks in the scripts folder, then import the [01_data_ingestion_and_prep](./scripts/01_data_ingestion_and_prep.ipynb) notebook into your Fabric workspace
 
     ![Import Notebook](./images/import_notebook.png)
 
@@ -63,7 +63,7 @@ For example, a lawyer can use such tooling to find previous court cases that are
 
 3. Enrich eBook Data using Azure OpenAI
 
-    Import the 02_enrich_data_with_AzureOpenAI notebook using the same process as before (including setting the default Lakehouse)
+    Import the [02_enrich_data_with_AzureOpenAI](./scripts/02_enrich_data_with_AzureOpenAI.ipynb) notebook using the same process as before (including setting the default Lakehouse)
 
     This notebook will be accessing Azure OpenAI resource from directly within Microsoft Fabric. When using an F64 sku or higher notice how you do not need an API key or a provisioned service in Azure! The use of Azure OpenAI is charged against the capacity units on your F64 capacity. AMAZING! With this lightweight, yet extremely powerful, use of Azure OpenAI we will perform the following:
 
@@ -86,7 +86,7 @@ For example, a lawyer can use such tooling to find previous court cases that are
 
 4. Analyze Enriched Data using Notebooks and Power BI
 
-    Import the 03_TSNE_data_analysis notebook using the same process as step 2 (including setting the default Lakehouse)
+    Import the [03_TSNE_data_analysis](./scripts/03_TSNE_data_analysis.ipynb) notebook using the same process as step 2 (including setting the default Lakehouse)
 
     Run the notebook. This notebook will use the embeddings we generated to find 'how' semantically similar each book is based on their cosine similarity. OpenAI ada-002 embeddings have 1536 dimensions which is far too many for humans to visualize. Thus, [TSNE](https://towardsdatascience.com/t-sne-clearly-explained-d84c537f53a) gives us a good and human-friendly estimate of 'how' similar these embeddings are. Here is an example from my most recent run:
 
