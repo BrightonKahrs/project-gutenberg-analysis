@@ -75,5 +75,37 @@ This project explores the following capabilities of Azure OpenAI, using Microsof
 
     ![TSNE Visual](./images/tsne.PNG)
 
-    Already we can see some clumpings of data from these books! This notebook now saves the x and y axis from this visual, then updates the books table with it. This way we can further our analysis with Power BI!
+    Already we can see some clumpings of data from these books! This notebook now saves the x and y axis from this visual, then updates the books table with it. This way we can further our analysis with Power BI, which is our next step!
 
+    Go to the Lakehouse, then open up the SQL analytics endpoint
+
+    ![SQL Analytics Endpoint](./images/sql_analytics_endpoint.png)
+
+    Here you can do a variety of analytics. You can write SQL queries, generate visual queries, manage the default semantic data model, and create a new report. The report we will create comes from the default semantic data model of the Lakehouse. It leverages Direct Lake mode which means there are no extra steps we need to do to start using Power BI on top of data lake!
+
+    Click new report
+
+    ![Create New Report](./images/create_new_report.png)
+
+    This will open up a report connected to the books data we just created
+
+    ![New Power BI Report](./images/new_power_bi_report.PNG)
+
+    Here is the report I created but feel free to get creative and explore the data! To understand how many books were assigned to each category I made a clustered column chart with 'category' on the x-axis and 'Count of book_id' on the y-axis (by clicking the arrow next to book_id in the y-axis you can change the aggregation metric). On the right I made a scatter chart with 'book_id' in the values, 'Sum of x_axis' in the x-axis and 'Sum of y_axis' in the y-axis and 'category' in the legend (I also added zoom sliders from the formatting pane). Then on the bottom I provided the book details in a table visual.
+
+    ![Finished Power BI Report](./images/finished_power_bi_report.png)
+
+    Save the Power BI report to your workspace and then start using it! Power BI is very interactive, by clicking on any visual it will cross filter others. 
+
+    ![Cross Filter](./images/cross_filter.png)
+
+    In the scatter chart you can box highlight any of the groupings to see what OpenAI thought were similar texts. 
+
+    ![Scatter Chart Box Highlight](./images/scatter_chart_box_highlight.png)
+
+    In a single Power BI report we can see all of the work we did with Azure OpenAI. Entity extraction gives us book titles, author, and more. Text summarization shows us the summary in the book details. Text classification is shown in our category bar chart. Semantic similarity is shown through the TSNE visualization. Through this we have turned unstructured text data into meaningful insights! 
+    
+    This concludes the project, thank you for your time. I hope you are now as excited about Microsoft Fabric and Azure OpenAI as I am!
+
+    developer: Brighton Kahrs
+    developer_email: brightonkahrs@msn.com
