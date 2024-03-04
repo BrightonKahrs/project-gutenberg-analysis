@@ -29,9 +29,13 @@ Many organizations have a treasure trove of text based data. This unstructured d
 
 1. Build Lakehouse
 
-    Go to your workspace, select the 'Data Science' or 'Data Engineering' experience, and create your Lakehouse. Feel free to name it whatever you like!
+    Go to (or create) the Fabric workspace that will be used for this project, select the 'Data Science' or 'Data Engineering' experience, and create your Lakehouse. Feel free to name it whatever you like!
 
     ![Build Lakehouse](./images/build_lakehouse.png)
+
+    Then go back to the workspace. The result should look something like this:
+
+    ![Step 1 End Result](./images/step_1_end_result.PNG)
 
 2. Ingest eBook Data onto OneLake
 
@@ -41,7 +45,7 @@ Many organizations have a treasure trove of text based data. This unstructured d
 
     *If you do not see the Import Notebook option, make sure you are on the Data Science or Data Engineering experience*
     
-    Open notebook and set the Lakehouse you just created as the default Lakehouse for your notebook
+    Open notebook item then click Add Lakehouse. Select 'Existing Lakehouse' then choose the Lakehouse you just created. This will make your Lakehouse the default for this notebook
 
     ![Set Default Lakehouse](./images/set_default_lakehouse.png)
 
